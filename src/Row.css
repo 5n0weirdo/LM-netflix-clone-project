@@ -1,14 +1,17 @@
 .row_posters {
   display: flex;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-y: hidden !important;
+  overflow-x: scroll !important;
   padding: 20px;
+}
+
+.row_posters ::-webkit-scrollbar {
+  display: none;
 }
 
 .row_poster {
   object-fit: contain !important;
-  /* width: auto; */
-  /* height: auto; */
+  /* width: 100%; */
   max-height: 100px;
   transition: transform 450ms;
   margin-right: 10px;

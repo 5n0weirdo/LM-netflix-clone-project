@@ -7,6 +7,7 @@ const base_url = "http://image.tmdb.org/t/p/original";
 
 function Row({ title, fetchUrl }) {
   const [movies, setMovies] = useState([]);
+
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
@@ -27,6 +28,7 @@ function Row({ title, fetchUrl }) {
         {/* posters */}
         {movies.map((movie) => (
           <img
+            key={movie.id}
             className="row_poster"
             src={`${base_url}${movie.poster_path}`}
             alt={movie.name}
