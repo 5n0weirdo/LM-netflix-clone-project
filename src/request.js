@@ -1,3 +1,6 @@
+
+const API_KEY = "b35e98d31f4128ef895462c0700582cc";
+
 const requests = {
   fetchTrending: `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`,
   fetchNetflixOriginals: `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_networks=213`,
